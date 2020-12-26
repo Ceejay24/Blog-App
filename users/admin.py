@@ -1,10 +1,4 @@
 from django.contrib import admin
-from .models import UserAccount
+from .models import Profile
 
-class UserAdmin(admin.ModelAdmin):
-    list_display = ('id', 'name', 'email')
-    list_display_links = ('id', 'name')
-    search_fields = ('name', )
-    list_per_page = 10
-
-admin.site.register(UserAccount, UserAdmin)
+admin.site.register(Profile)
